@@ -1,0 +1,398 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #000000 30%, #1a130d 90%, #1a130d 10%);
+  scroll-behavior: smooth;
+}
+
+  #cielo {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to bottom, #0b4c5f 20%, #04b4ae 65%, #1a130d  100%);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #edificios {
+    background: url("https://res.cloudinary.com/pastelitos/image/upload/v1610526533/eva/edificiosOne_fsg7nx.svg");
+    height: 230px;
+    width: 100%;
+    top: 6.5em;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    -webkit-animation: animar_edificios 120s linear infinite;
+    -ms-animation: animar_edificios 120s linear infinite;
+    -moz-animation: animar_edificios 120s linear infinite;
+    position: absolute;
+  }
+  
+  /* Animacion edificios */
+  
+  @keyframes animar_edificios {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  @-webkit-keyframes animar_edificios {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  @-ms-keyframes animar_edificios {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  @-moz-keyframes animar_edificios {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  
+  #luna {
+    width: 7em;
+    height: 7em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 30px 10px 0 #f7f8e0;
+    -webkit-box-shadow: 30px 10px 0 #f7f8e0;
+    box-shadow: 30px 10px 0 #f7f8e0;
+    margin-left: 60%;
+    position: absolute;
+    
+  }
+  
+  #muro {
+    width: 100%;
+    height: 10em; /*visina smedjeg dijela zida*/
+    /*background: -webkit-linear-gradient(top, #190c0c 10%, #1e1010 1%, #000000 50% );*/
+    position: relative; 
+    z-index: 2; 
+    
+  }
+  
+  #gato {
+    background: url("https://res.cloudinary.com/pastelitos/image/upload/v1610526571/eva/gatito_pushui.svg");
+    height: 297px;
+    width: 507.5px;
+    margin-left: 2em;
+    -webkit-animation: sprite-animation 1.2s steps(16, end) infinite;
+    -moz-animation: sprite-animation 1.2s steps(16, end) infinite;
+    -ms-animation: sprite-animation 1.2s steps(16, end) infinite;
+    animation: sprite-animation 1.2s steps(16, end) infinite;
+    position: relative;
+    z-index: 2; 
+  }
+  
+  @-webkit-keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -8120px 0;
+    }
+  }
+  
+  @-ms-keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -8120px 0;
+    }
+  }
+  
+  @-moz-keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -8120px 0;
+    }
+  }
+  
+  @keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -8120px 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #351b1b00;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(90% - 20px);
+  }
+  
+  
+  
+
+.text {
+    flex: 1;
+    padding: 20px;
+    background-color: #222a9f00;
+    font-family: "NTR", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    max-width: fit-content ;
+    margin-right: 20px;
+  
+
+}
+
+
+.card-container {
+  display: flex;
+}
+
+
+.card {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  transition: transform 0.2s ease, margin-right 0.2s ease;
+  filter: brightness(0.6);
+   
+}
+
+.card-left {
+  transform: rotate(-10deg); /* Tilt the left card to the left */
+}
+
+.card-left:hover {
+  transform: rotate(0deg); /* Reset the tilt effect on hover */
+  filter: brightness(1);
+}
+
+.card-right {
+  transform: rotate(30deg); /* Tilt the right card to the right */
+  margin-right: -150px;
+ 
+}
+
+.card-right:hover {
+    transform: rotate(20deg); /* Reset the tilt effect on hover */
+    margin-right: -120px; /* Remove the overlap on hover */
+    filter: brightness(1);
+}
+
+
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+
+/* Header Container */
+header {
+    display: flex;
+    justify-content: space-between; /* Align content horizontally */
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Buttons Container */
+.buttons-container {
+    display: flex;
+    gap: 20px; /* Adjust the gap between buttons */
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    z-index: 2;
+}
+
+/* Header Button Styles */
+.header-button {
+    background-color: #ffffff; /* Button background color */
+    color: #333; /* Button text color */
+    padding: 10px 20px; /* Padding around button text */
+    border: none; /* Remove button border */
+    border-radius: 7px; /* Add border radius for a rounded look */
+    cursor: pointer; /* Cursor style on hover */
+    font-family: "NTR", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Vertical Navigation Styles */
+.vertical-nav {
+  background-color: rgba(53, 27, 27, 0);
+  width: 120px; /* Set the width of the vertical navigation */
+  position: fixed; /* Fixed position so it stays in view */
+  top: 25em; /* Adjust the top position to create space below "muro" */
+  right: 0; /* Position on the right side */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  z-index: 2; 
+  font-family: "NTR", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.vertical-nav ul {
+  list-style-type: none; /* Remove bullet points for list items */
+  padding: 0;
+}
+
+.vertical-nav a {
+  display: block;
+  padding: 15px; /* Add some padding for better spacing */
+  color: #fff; /* Text color for navigation links */
+  text-decoration: none; /* Remove underlines for links */
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
+.vertical-nav a:hover {
+  background-color: #0b4b5f00; /* Background color on hover */
+  color: #65d7d3; /* Text color on hover */
+}
+
+
+/* Your existing CSS styles */
+
+/* Header Container */
+header {
+  padding: 20px; /* Padding around header content */
+  display: flex;
+  justify-content: space-between; /* Align content horizontally */
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Buttons Container */
+.buttons-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between buttons */
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  z-index: 2;
+}
+
+/* Header Button Styles */
+.header-button {
+  background-color: #ffffff; /* Button background color */
+  color: #333; /* Button text color */
+  padding: 10px 20px; /* Padding around button text */
+  border: none; /* Remove button border */
+  border-radius: 7px; /* Add border radius for a rounded look */
+  cursor: pointer; /* Cursor style on hover */
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.header-button:hover {
+  background-color: #db4109; /* Button background color on hover */
+  color: #fff; /* Button text color on hover */
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+  background-color: #00000000;
+  padding: 20px;
+  margin-left: 20px; /* Same margin as .container to align with it */
+  width: calc(90% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+.portfolio h2 {
+  font-size: 24px; /* Adjust the heading font size */
+  margin-bottom: 20px; /* Add space below the heading */
+  color: #ffffff; 
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.project {
+  margin-bottom: 20px; /* Add space between cards */
+  width: calc(33.33% - 20px); /* Adjust the width for a 3-column layout */
+  box-sizing: border-box; /* Include padding and border in the width */
+  background-color: #190c0c; /* Background color for cards */
+  padding: 20px; /* Padding inside each card */
+  border: 1px solid #0b4c5f; /* Add a border around each card */
+  text-align: center; /* Center align the content */
+  border-radius: 2em; /* Add border radius for a rounded look */
+  color: #ffffff; 
+  margin-top: 0;
+}
+
+.project:hover {
+  background-color: #0b4c5f; /* Button background color on hover */
+  color: #fff; /* Button text color on hover */
+}
+
+.project img {
+  max-width: 100%; /* Ensure images fit within their containers */
+  height: auto; /* Maintain aspect ratio of images */
+}
+
+.project h3 {
+  
+  margin-top: 10px; /* Add space above the title */
+  font-family: "NTR", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.project p {
+  font-family: "NTR", sans-serif;
+  font-size: 14px; /* Adjust the project description font size */
+}
+
+.buttons {
+  margin-top: 20px; /* Add space above the buttons */
+}
+
+.button {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 15px; /* Padding around button text */
+  border: none; /* Remove button border */
+  border-radius: 7px; /* Add border radius for a rounded look */
+  cursor: pointer; /* Cursor style on hover */
+  font-family: "NTR", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px; /* Add space between buttons */
+}
